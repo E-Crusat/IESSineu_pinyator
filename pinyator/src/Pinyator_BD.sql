@@ -157,7 +157,6 @@ CREATE TABLE IF NOT EXISTS `EVENT` (
   `Data` datetime NOT NULL,
   `Tipus` int(11) NOT NULL,
   `Estat` int(11) NOT NULL DEFAULT '1',
-  `Codi` varchar(50) NOT NULL,
   `EVENT_PARE_ID` int(11) NOT NULL DEFAULT '0',
   `ESPLANTILLA` bit(1) DEFAULT NULL,
   `CONTADOR` bit(1) DEFAULT b'0',

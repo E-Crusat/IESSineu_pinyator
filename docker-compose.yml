@@ -1,0 +1,53 @@
+version: "3.9"
+
+services:
+  pinyator:
+    image: comunicat/pinyator
+    build: pinyator
+    stdin_open: true
+    tty: true
+    restart: on-failure
+    networks:
+      - comunicat
+    volumes:
+      - ./pinyator/src:/pinyator/pinyator:cached
+    ports:
+      - 8100:80
+    depends_on:
+      - php
+  php:
+    image: comunicat/php
+    build: php
+    stdin_open: true
+    tty: true
+    restart: on-failure
+    # entrypoint: ["wait-for-it", "database:5432", "--", "php"]
+    # command: ["-S", "0.0.0.0:8110", "./pinyator/Pinyator.php"]
+    networks:
+      - comunicat
+    volumes:
+      - ./pinyator/src:/pinyator/pinyator:cached
+    depends_on:
+      - mysql
+  mysql:
+    image: mysql:8.4.4
+    ports:
+      - 3306:3306
+    networks:
+      - comunicat
+    volumes:
+      - mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: pinyator
+      MYSQL_USER: pinyator
+      MYSQL_PASSWORD: pinyator
+      MYSQL_DATABASE: pinyator
+
+volumes:
+  mysql-data:
+
+networks:
+  comunicat:
+    ipam:
+      config:
+        - subnet: 172.24.0.0/16

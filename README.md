@@ -1,4 +1,8 @@
-Aquest repositori s'ha important d'una copia del Pinyator dels Castellers d'Estocolm amb una finalitat educativa a un Institut de Mallorca per ensenyar com fer servir eines de control de versions.
+Aquest repositori s'ha important d'una copia del Pinyator dels Castellers d'Estocolm amb una finalitat educativa a un Institut de Mallorca per ensenyar com fer servir eines de control de versions. Aquest codi NO és correcte, ha rebut canvis en el procés d'ensenyament del control de serveis. Dit d'una altra manera,
+
+# No feu servir aquest codi per montar la vostra pròpia versió del Pinyator
+
+---
 
 # Pinyator
 

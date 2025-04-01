@@ -1,3 +1,5 @@
+Aquest repositori s'ha important d'una copia del Pinyator dels Castellers d'Estocolm amb una finalitat educativa a un Institut de Mallorca per ensenyar com fer servir eines de control de versions.
+
 # Pinyator
 
 ## Source

@@ -53,10 +53,10 @@ else if (mysqli_error($conn) != "")
 {
 	echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
-
+//
 mysqli_close($conn);
 
-//Desactivem aquest codi
+////Desactivem aquest codi
 /* if ((!empty($_GET['id'])) && (isset($_COOKIE[$cookie_name])))
 {
 

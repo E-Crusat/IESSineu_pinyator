@@ -48,7 +48,7 @@ if ($dia==-1)
 {
 	$ordenacio=" ORDER BY ORDENACIO DESC, E.EVENT_PARE_ID, E.DATA";
 }
-
+/// LoMusic
 if (EsMusic())
 {
 	$musics=" AND E.TIPUS = -2 ";

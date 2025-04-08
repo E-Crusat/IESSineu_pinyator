@@ -17,7 +17,7 @@ if (!empty($_GET["obj"]))
 
 	$sql="";
 	for ($x = 0; $x < count($arry); $x++)
-	{
+	{// marc riutort
 		$obj = $arry[$x];
 		if (($obj->cnv == 1) and ($obj->ca > 0)) 
 		{
